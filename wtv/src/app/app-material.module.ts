@@ -15,6 +15,10 @@ import { Route, Routes } from '@angular/router';
 import { LdapListComponent } from './ldap-list/ldap-list.component';
 import { LdapDetailComponent } from './ldap-detail/ldap-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MatTooltipModule } from "@angular/material/tooltip";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatSelectModule} from "@angular/material/select";
+
 
 @NgModule({
   declarations: [],
@@ -30,6 +34,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatTableModule,
     MatPaginatorModule,
     MatCheckboxModule,
+  ],
+  exports: [
+    MatTooltipModule,
+    MatProgressSpinnerModule,
+    MatSelectModule,
   ]
 })
 export class AppMaterialModule { }

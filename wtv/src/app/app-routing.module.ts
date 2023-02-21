@@ -6,7 +6,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   { path: 'users/list', component: LdapListComponent},
-  { path: 'user/id', component: LdapDetailComponent},
+  { path: 'user/:id', component: LdapDetailComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 

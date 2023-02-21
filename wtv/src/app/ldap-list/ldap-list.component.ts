@@ -64,4 +64,12 @@ disponible après la création de la vue. */
     this.getUsers();
   }
 
+  edit(login: string){
+    this.router.navigate(['/user',login]).then((e)=> {
+      if (! e) {
+        console.log("Navigation has failed !")
+      }
+    })
+  }
+
 }
