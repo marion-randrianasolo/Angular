@@ -11,13 +11,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { Route, Routes } from '@angular/router';
-import { LdapListComponent } from './ldap-list/ldap-list.component';
-import { LdapDetailComponent } from './ldap-detail/ldap-detail.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MatTooltipModule } from "@angular/material/tooltip";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatSelectModule} from "@angular/material/select";
+import {MAT_SNACK_BAR_DEFAULT_OPTIONS} from "@angular/material/snack-bar";
 
 
 @NgModule({
@@ -39,12 +36,11 @@ import {MatSelectModule} from "@angular/material/select";
     MatTooltipModule,
     MatProgressSpinnerModule,
     MatSelectModule,
+  ],
+  providers: [
+    {provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: {duration: 2500,
+      verticalPosition: 'top'}}
   ]
 })
 export class AppMaterialModule { }
 
-const routes: Routes = [
-  { path: 'users/list', component: LdapListComponent },
-  { path: 'user/:id', component: LdapDetailComponent },
-  { path: '**', component: PageNotFoundComponent }
-];
