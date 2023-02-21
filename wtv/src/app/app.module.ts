@@ -19,39 +19,24 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatInputModule } from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { LdapEditComponent } from './ldap-edit/ldap-edit.component';
-import { LdapAddComponent } from './ldap-add/ldap-add.component';
-import { AlertComponent } from './share/alert/alert.component';
+import {LdapManagementModule} from "./ldap-management/ldap-management.module";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LdapListComponent,
     PageNotFoundComponent,
-    NavbarComponent,
-    LdapEditComponent,
-    LdapAddComponent,
-    AlertComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatFormFieldModule,
-    MatSlideToggleModule,
-    MatInputModule,
+    LdapManagementModule,
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
